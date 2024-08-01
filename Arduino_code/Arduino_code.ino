@@ -1,8 +1,8 @@
 // Includes the Servo library
 #include <Servo.h>
 // Defines Tirg and Echo pins of the Ultrasonic Sensor
-const int trigPin = 10;
-const int echoPin = 11;
+const int trigPin = D1;
+const int echoPin = D2;
 // Variables for the duration and the distance
 long duration;
 int distance;
@@ -11,7 +11,7 @@ void setup() {
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
   Serial.begin(9600);
-  myServo.attach(12); // Defines on which pin is the servo motor attached
+  myServo.attach(D3); // Defines on which pin is the servo motor attached
 }
 void loop() {
   // rotates the servo motor from 15 to 165 degrees
